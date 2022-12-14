@@ -1,0 +1,75 @@
+header
+{
+    display: flex;
+    text-align: justify;
+    color: crimson;
+}
+
+.navigation
+{
+    background-color: rgba(22, 138, 103, 0.459);
+    width: 100%;
+    height: auto;
+    border: 1px solid blue;
+    color: red;
+    
+}
+
+.navigation ul
+{
+    list-style-type: none;
+    display: flex;
+    color: red;
+}
+.navigation li
+{
+    margin-right: 25px;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+
+}
+
+section
+{
+
+
+}
+
+
+
+@font-face {
+    font-family: 'robotoblack';
+    src: url('Roboto-Black-webfont.eot');
+    src: url('Roboto-Black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Roboto-Black-webfont.woff2') format('woff2'),
+         url('Roboto-Black-webfont.woff') format('woff'),
+         url('Roboto-Black-webfont.ttf') format('truetype'),
+         url('Roboto-Black-webfont.svg#robotoblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body{
+    font-family: 'robotoblack';
+    background-color: rgba(27, 218, 186, 0.137);
+    color: rgba(19, 177, 66, 0.74);
+}
+
+footer
+{
+   display: inline-block;
+   border: 1px solid blue ;
+   margin-top: 10px;
+   background-color: rgba(30, 146, 65, 0.637) ; 
+   width: 100%;
+}
+
+#About
+{
+    margin-top: auto;
+    height: auto;
+    width: auto;
+}
