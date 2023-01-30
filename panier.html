@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier</title>
+    <script src="panier.js" defer></script> 
+</head>
+<body>
+  <div id="shopping-cart">
+    <h2>Mon panier</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Article</th>
+          <th>Prix</th>
+          <th>Quantité</th>
+          <th>Total</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Article 1</td>
+          <td>10 €</td>
+          <td>
+            <button class="decrement">-</button>
+            <input type="number" value="1">
+            <button class="increment">+</button>
+          </td>
+          <td class="item-total">10 €</td>
+          <td><button class="remove-item">Supprimer</button></td>
+        </tr>
+        <tr>
+          <td>Article 2</td>
+          <td>20 €</td>
+          <td>
+            <button class="decrement">-</button>
+            <input type="number" value="1">
+            <button class="increment">+</button>
+          </td>
+          <td class="item-total">20 €</td>
+          <td><button class="remove-item">Supprimer</button></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Total</td>
+          <td class="cart-total">30 €</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  
+  
+</body>
+</html>
