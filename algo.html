@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lecture de phrase</title>
+  <meta charset="UTF-8">
+  <script>
+    function lirePhrase() {
+      // Récupération de la phrase entrée par l'utilisateur
+      var phrase = document.getElementById("phrase").value;
+
+      // Calcul de la longueur de la phrase
+      var longueur = phrase.length;
+
+      // Calcul du nombre de mots dans la phrase
+      var mots = phrase.split(" ").length;
+
+      // Calcul du nombre de voyelles dans la phrase
+      var voyelles = phrase.match(/[aeiou]/gi).length;
+
+      // Affichage des résultats
+      document.getElementById("longueur").innerHTML = "La phrase contient " + longueur + " caractères.";
+      document.getElementById("mots").innerHTML = "La phrase contient " + mots + " mots.";
+      document.getElementById("voyelles").innerHTML = "La phrase contient " + voyelles + " voyelles.";
+    }
+  </script>
+</head>
+<body>
+  <h1>Lecture de phrase</h1>
+  <p>Entrez une phrase se terminant par un point :</p>
+  <input type="text" id="phrase"><br><br>
+  <button onclick="lirePhrase()">Analyser la phrase</button>
+  <br><br>
+  <div id="resultats">
+    <p id="longueur"></p>
+    <p id="mots"></p>
+    <p id="voyelles"></p>
+  </div>
+</body>
+</html>
