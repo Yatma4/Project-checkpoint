@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tri par insertion</title>
+	<script>
+		function insertionSort(arr) {
+			for (let i = 1; i < arr.length; i++) {
+				let j = i - 1;
+				let temp = arr[i];
+				while (j >= 0 && arr[j] > temp) {
+					arr[j + 1] = arr[j];
+					j--;
+				}
+				arr[j + 1] = temp;
+			}
+			return arr;
+		}
+
+		window.onload = function() {
+			let arr = [5, 2, 7, 3, 9, 1, 6];
+			console.log("Avant le tri : " + arr);
+			arr = insertionSort(arr);
+			console.log("Après le tri : " + arr);
+		}
+	</script>
+</head>
+<body>
+</body>
+</html>
