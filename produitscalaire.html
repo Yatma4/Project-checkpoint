@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Produit scalaire</title>
+  </head>
+  <body>
+    <h1>Produit scalaire</h1>
+    <button onclick="verifierOrthogonalite()">Vérifier l'orthogonalité de n paires de vecteurs</button><br><br>
+    <label for="resultat">Résultat :</label>
+    <span id="resultat"></span>
+    <script>
+      function dot_product(v1, v2) {
+        // Calculer le produit scalaire de v1 et v2
+        let ps = 0;
+        for (let i = 0; i < v1.length; i++) {
+          ps += v1[i] * v2[i];
+        }
+        return ps;
+      }
+
+      function verifierOrthogonalite() {
+        // Définir les vecteurs d'entrée
+        let vecteurs = [
+          {v1: [1, 0], v2: [0, 1]},
+          {v1: [1, 1], v2: [2, -2]},
+          {v1: [1, 2, 3], v2: [-1, 0, 2]}
+        ];
+        // Initialiser un tableau pour stocker les résultats
+        let resultats = [];
+        // Parcourir chaque paire de vecteurs
+        vecteurs.forEach(function(paire) {
+          // Calculer le produit scalaire de la paire de vecteurs
+          let ps = dot_product(paire.v1, paire.v2);
+          // Vérifier si les deux vecteurs sont orthogonaux
+          if (ps === 0) {
+            resultats.push("Les vecteurs [" + paire.v1 + "] et [" + paire.v2 + "] sont orthogonaux.");
+          } else {
+            resultats.push("Les vecteurs [" + paire.v1 + "] et [" + paire.v2 + "] ne sont pas orthogonaux.");
+          }
+        });
+        // Afficher les résultats
+        document.getElementById("resultat").innerHTML = resultats.join("<br>");
+      }
+    </script>
+  </body>
+</html>

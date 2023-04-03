@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Somme des éléments distincts</title>
+  </head>
+  <body>
+    <h1>Somme des éléments distincts</h1>
+    <label for="ensemble1">Jeu 1 :</label>
+    <input type="text" id="ensemble1" value="3, 1, 7, 9"><br><br>
+    <label for="ensemble2">Jeu 2 :</label>
+    <input type="text" id="ensemble2" value="2, 4, 1, 9, 3"><br><br>
+    <button onclick="calculerSomme()">Calculer la somme des éléments distincts</button><br><br>
+    <label>Résultat :</label>
+    <span id="resultat"></span>
+    <script>
+      function calculerSomme() {
+        // Récupérer les tableaux d'entrée
+        let ensemble1 = document.getElementById("ensemble1").value.split(", ");
+        let ensemble2 = document.getElementById("ensemble2").value.split(", ");
+        // Concaténer les deux tableaux
+        let ensembleConcatene = ensemble1.concat(ensemble2);
+        // Initialiser un tableau pour stocker les éléments distincts
+        let elementsDistincts = [];
+        // Parcourir chaque élément de l'ensemble concaténé
+        ensembleConcatene.forEach(function(element) {
+          // Vérifier si l'élément est déjà dans le tableau des éléments distincts
+          if (!elementsDistincts.includes(element)) {
+            // Si l'élément est distinct, l'ajouter au tableau des éléments distincts
+            elementsDistincts.push(element);
+          }
+        });
+        // Calculer la somme des éléments distincts
+        let somme = 0;
+        elementsDistincts.forEach(function(element) {
+          somme += parseInt(element);
+        });
+        // Afficher le résultat
+        document.getElementById("resultat").innerHTML = somme;
+      }
+    </script>
+  </body>
+</html>
